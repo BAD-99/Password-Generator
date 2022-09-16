@@ -1,0 +1,56 @@
+:root{
+    --container-color: #24232B;
+    --subcontainer-color: #18171F;
+    --light-font: #716F7C;
+    --lightest-font:#D4D3DB;
+}
+*{
+    font-family: "Lucida Console", "Courier New", monospace;
+    color:var(--lightest-font)
+}
+body{
+    margin:0%;
+    width:100vw;
+    height: 100vh;
+}
+
+.container{
+    position: absolute;
+
+    width:max(40%,400px);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+html{
+    background: linear-gradient(#08070C,#14131B) no-repeat center center fixed;
+    background-size: cover;
+}
+.toolbar,.string{
+    margin:1rem;
+    padding:.2rem;
+    background-color: var(--container-color);
+}
+.character-container{
+    padding: 0.5rem;
+}
+.checkbox{
+    padding: 0.5rem;
+}
+.strength-container{
+    padding: 1rem;
+    margin: 0.7rem;
+    background-color: var(--subcontainer-color);
+    color:var(--light-font);
+}
+#strength-output{
+    float:right;
+}
+.title{
+    text-align: center;
+    color:var(--light-font)
+}
+.string{
+    padding:1rem;
+}
