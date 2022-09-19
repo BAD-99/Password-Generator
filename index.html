@@ -5,7 +5,6 @@
         <meta name="author" content="Brandon Davis">
         <meta name="description" content="Quick and customizable password generator">
         <link rel="stylesheet" type="text/css" href="style.css">
-
         <script src="script.js" defer></script>
         <title>Password Generator</title>
     </head>
@@ -21,27 +20,33 @@
                         <input type="range" id="range-character-length">
                     </div>
                 </div>
-                <div class="checkbox">
+
+                <label class="checkbox-container">
                     <input type="checkbox" id="checkbox-include-uppercase">
-                    <label for="checkbox-include-uppercase">Include Uppercase Letters</label>
-                </div>
-                <div class="checkbox">
+                    <span class="checkmark"></span>
+                    Include Uppercase Letters
+                </label>
+
+                <label class="checkbox-container">
                     <input type="checkbox" id="checkbox-include-lowercase">
-                    <label for="checkbox-include-lowercase">Include Lowercase Letters</label>
-                </div>
-                <div class="checkbox">
+                    <span class="checkmark"></span>
+                    Include Lowercase Letters
+                </label>
+                <label class="checkbox-container">
                     <input type="checkbox" id="checkbox-include-numbers">
-                    <label for="checkbox-include-numbers">Include Numbers</label>
-                </div>
-                <div class="checkbox">
+                    <span class="checkmark"></span>
+                    Include Numbers
+                </label>
+                <label class="checkbox-container">
                     <input type="checkbox" id="checkbox-include-symbols">
-                    <label for="checkbox-include-symbols">Include Symbols</label>
-                </div>
+                    <span class="checkmark"></span>
+                    Include Symbols
+                </label>
                 <div class="strength-container">
                     STRENGTH
                     <span id="strength-output">strength</span>
                 </div>
-                <div>
+                <div id="button-box">
                     <input type="button" id="generate" value="GENERATE">
                 </div>
             </div>
