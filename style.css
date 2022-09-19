@@ -4,6 +4,8 @@
     --light-font: #716F7C;
     --lightest-font:#D4D3DB;
     --pastel-green: #A4FFAF;
+    --hover-green: #dcffe0;
+    --active-green: #70ff81;
 }
 *{
     font-family: "Lucida Console", "Courier New", monospace;
@@ -17,7 +19,6 @@ body{
 
 .container{
     position: absolute;
-
     width:max(40%,400px);
     top:50%;
     left:50%;
@@ -55,6 +56,7 @@ html{
 .string{
     padding:1rem;
     border-radius: 2px;
+    font-size: 1.5rem;
 }
 #button-box{
     margin: 0.7rem;
@@ -68,6 +70,13 @@ html{
     border-radius: 2px;
     border-width: 0;
     font-size: 1.2rem;
+    transition: 150ms;
+}
+#generate:hover{
+    background-color: var(--hover-green);
+}
+#generate:active{
+    background-color: var(--active-green);
 }
 .checkbox-container{
     display: block;
@@ -93,35 +102,64 @@ html{
     border: solid 2px var(--light-font);
     border-radius: 2px;
     transition: 150ms;
-  }
-  
-  .checkbox-container:hover input ~ .checkmark {
-    background-color: var(--light-font);
-  }
-  
-  .checkbox-container input:checked ~ .checkmark {
-    background-color: var(--pastel-green);
-    border: solid 2px rgba(0,0,0,0);
-  }
-  
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  .checkbox-container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  .container .checkmark:after {
-    left: 4px;
-    top: 0px;
-    width: 5px;
-    height: 10px;
-    border: solid var(--container-color);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+}
+
+.checkbox-container:hover input ~ .checkmark {
+background-color: var(--light-font);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+background-color: var(--pastel-green);
+border: solid 2px rgba(0,0,0,0);
+}
+.checkbox-container:hover input:checked ~ .checkmark{
+background-color: var(--hover-green);
+}
+.checkbox-container:active input:checked ~ .checkmark{
+    background-color: var(--active-green);
+    }
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+display: block;
+}
+
+.checkbox-container .checkmark:after {
+left: 4px;
+top: 0px;
+width: 5px;
+height: 10px;
+border: solid var(--container-color);
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+.slider-container{
+margin: 0.7rem;
+}
+.slider{
+appearance: none;
+width: 100%;
+height: 0.5rem;
+accent-color: var(--pastel-green);
+background: linear-gradient(to right, var(--pastel-green) 0%,var(--pastel-green) 50%,var(--subcontainer-color) 50%,var(--subcontainer-color) 100%);
+border-radius: 0.25rem;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 1rem;
+}
+#character-length-output{
+    font-size: 1.5rem;
+    color: var(--pastel-green);
+    float: right;
+
+}
