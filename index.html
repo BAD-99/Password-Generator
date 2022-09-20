@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Brandon Davis">
-        <meta name="description" content="Quick and customizable password generator">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js" defer></script>
-        <title>Password Generator</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="title">Password Generator</div>
-            <div class="string">string</div>
-            <div class="toolbar">
-                <div class="character-container">
-                    <div class="flex-container">
-                        <div id="character-length">Character Length</div>
-                        <div id="character-length-output">0</div>
-                    </div>
-                    <div class ="slider-container">
-                        <input type="range" min="1" max="32" value="12" class="slider" id="range-character-length">
-                    </div>
-                </div>
 
-                <label class="checkbox-container">
-                    <input type="checkbox" id="checkbox-include-uppercase">
-                    <span class="checkmark"></span>
-                    Include Uppercase Letters
-                </label>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Brandon Davis">
+    <meta name="description" content="Quick and customizable password generator">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+</head>
 
-                <label class="checkbox-container">
-                    <input type="checkbox" id="checkbox-include-lowercase">
-                    <span class="checkmark"></span>
-                    Include Lowercase Letters
-                </label>
-                <label class="checkbox-container">
-                    <input type="checkbox" id="checkbox-include-numbers">
-                    <span class="checkmark"></span>
-                    Include Numbers
-                </label>
-                <label class="checkbox-container">
-                    <input type="checkbox" id="checkbox-include-symbols">
-                    <span class="checkmark"></span>
-                    Include Symbols
-                </label>
-                <div class="strength-container">
-                    STRENGTH
-                    <span id="strength-output">strength</span>
+<body>
+    <div class="container">
+        <div class="title">Password Generator</div>
+        <div class="string" id="string">string</div>
+        <div class="toolbar">
+            <div class="character-container">
+                <div class="flex-container">
+                    <div id="character-length">Character Length</div>
+                    <div id="character-length-output">0</div>
                 </div>
-                <div id="button-box">
-                    <input type="button" id="generate" value="GENERATE">
+                <div class="slider-container">
+                    <input type="range" min="1" max="32" value="16" class="slider" id="range-character-length">
                 </div>
+            </div>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="checkbox-include-uppercase" checked>
+                <span class="checkmark"></span>
+                Include Uppercase Letters
+            </label>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="checkbox-include-lowercase" checked>
+                <span class="checkmark"></span>
+                Include Lowercase Letters
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="checkbox-include-numbers" checked>
+                <span class="checkmark"></span>
+                Include Numbers
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="checkbox-include-symbols">
+                <span class="checkmark"></span>
+                Include Symbols
+            </label>
+            <div class="strength-container">
+                STRENGTH
+                <span id="strength-output">strength</span>
+            </div>
+            <div id="button-box">
+                <input type="button" id="generate" value="GENERATE">
             </div>
         </div>
     </div>
-    </body>
+    </div>
+</body>
+
 </html>
